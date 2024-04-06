@@ -7,7 +7,7 @@ const userService = require("./user-service.js");
 const passport = require("passport");
 const passportJwt = require("passport-jwt");
 
-const HTTP_PORT = process.env.PORT || 3000 || 8080;
+const HTTP_PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors());
