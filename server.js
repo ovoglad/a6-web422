@@ -13,8 +13,8 @@ app.use(express.json());
 app.use(cors());
 
 // set up
-let ExtractJwt = passport.ExtractJwt;
-let JwtStrategy = passport.Strategy;
+let ExtractJwt = passportJwt.ExtractJwt;
+let JwtStrategy = passportJwt.Strategy;
 
 const jwtOptions = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderWithScheme("jwt"),
