@@ -4,7 +4,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 dotenv.config();
 const userService = require("./user-service.js");
-const passportJWT = require("passport");
+const passport = require("passport");
 
 const HTTP_PORT = process.env.PORT || 8080;
 
@@ -12,8 +12,8 @@ app.use(express.json());
 app.use(cors());
 
 // set up
-let ExtractJwt = passportJWT.ExtractJwt;
-let JwtStrategy = passportJWT.Strategy;
+let ExtractJwt = passport.ExtractJwt;
+let JwtStrategy = passport.Strategy;
 
 const jwtOptions = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderWithScheme("jwt"),
